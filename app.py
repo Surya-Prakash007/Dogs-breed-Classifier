@@ -7,6 +7,9 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
+import zipfile
+with zipfile.ZipFile('CNN20.zip', 'r') as zip_ref:
+    zip_ref.extractall()
 
 st.title('Dogs Breed Classifier')
 pic=Image.open('picture.png')
